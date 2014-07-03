@@ -106,4 +106,4 @@
 		};
 	}
 
-}( this, jQuery ));
+}( this, Zepto ));
