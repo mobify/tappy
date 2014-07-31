@@ -1,5 +1,23 @@
 /*! Tappy! - a lightweight normalized tap event. Copyright 2013 @scottjehl, Filament Group, Inc. Licensed MIT */
-(function( w, $, undefined ){
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        /*
+         In AMD environments, you will need to define an alias
+         to your selector engine. i.e. either zepto or jQuery.
+         Additionally, you will need to alias velocity and
+         zappy.
+         */
+        define([
+            '$'
+        ], factory);
+    } else {
+        /*
+         Browser globals
+         */
+        factory(window.$);
+    }
+}(function($, undefined){
+    var w = window;
 
 	// handling flag is true when an event sequence is in progress (thx androood)
 	w.tapHandling = false;
@@ -106,4 +124,4 @@
 		};
 	}
 
-}( this, Zepto ));
+}));
